@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- tailwindCSS CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome CDN -->
@@ -23,8 +28,46 @@
   </head>
 
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <!-- <h1 class="text-6xl font-bold text-center text-indigo-950">Discount Calculator</h1> -->
+    </header>
+    <main>
+      <section
+        class="bg-blue-800 w-1/4 mx-auto my-20 px-3 py-6 rounded-xl space-y-6"
+      >
+        <div class="bg-slate-200 w-4/5 mx-auto text-center rounded-3xl p-10">
+          <h2 class="text-3xl font-semibold">Price</h2>
+          <h1 class="text-5xl text-blue-950 mt-5">
+            $<span id="final-price">100</span>
+          </h1>
+          <p class="font-light mt-5 text-left">
+            Original Price: $<span id="original-price">00</span>
+          </p>
+        </div>
+        <div class="bg-emerald-300 p-10 rounded-xl space-y-3">
+          <input
+            type="number"
+            name=""
+            placeholder="Original Price"
+            class="px-3 py-1 rounded-lg text-white"
+            id="input-price"
+          />
+          <input
+            type="number"
+            id="discount-amount"
+            placeholder="Discount"
+            name=""
+            class="px-3 py-1 rounded-lg bg-slate-300"
+          />
+          <button
+            id="calculate-btn"
+            class="btn btn-primary bg-amber-600 border-none"
+          >
+            Calculate
+          </button>
+        </div>
+      </section>
+    </main>
     <footer></footer>
 
     <!-- Link js file -->
